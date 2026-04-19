@@ -91,11 +91,11 @@ section {
 }
 .header .logo {
     font-weight: bolder;
-    color: rgb(255, 255, 255);
+    color: rgb(167, 167, 167);
     font-size: 3rem;
 }
 .header .logo span {
-    color: rgb(144, 2, 132);
+    color: rgb(205, 205, 203);
 }
 .header .navbar a {
     display: inline-block;
