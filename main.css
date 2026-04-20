@@ -111,7 +111,7 @@ section {
     width: auto;
     object-fit: contain;  /* mantém proporção da imagem */
 }
-/* fim*/
+/* fim*/d
 .header .logo span {
     color: rgb(205, 205, 203);
 }
@@ -241,6 +241,8 @@ section {
     color:  #cfcfcf;
     padding: 0.8rem 0;
     line-height: 1.8;
+    text-align: justify; /* justificado texto */
+    text-justify: inter-word; /* */
 }
 .about .content .box-container {
     display: flex;
