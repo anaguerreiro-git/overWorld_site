@@ -28,7 +28,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-    background: rgb(150, 150, 150);
+    background: rgb(150, 27, 168) /* barra de rolagem  */
 }
 
 body {
@@ -52,7 +52,7 @@ section {
     transform: translateY(-50%);
     height: .1rem;
     width: 100%;
-    background: #aaa;
+    background: #961BA8;
     z-index: -1;
 }
 .heading span {
@@ -60,7 +60,7 @@ section {
     color: #ffffff;
     background: #000;
     padding: .5rem 1.5rem;
-    border: 0.1rem solid #aaa;
+    border: 0.1rem solid #aaa9a9;
     border-radius: .5rem;
 }
 .btn {
@@ -68,14 +68,22 @@ section {
     display: inline-block;
     padding: 1rem 2.8rem;
     padding-right: 3rem;
-    background: linear-gradient(130deg, rgb(143, 0, 179) 93%, transparent 90%);
+    background: linear-gradient(135deg, #6a00ff, #8c14d1); /* botão inteiro sem o corte la lateral */
     color: #fff;
     cursor: pointer;
     font-size: 1.7rem;
+     /*INICIO */
+     cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: 8px; /* deixa moderno */
+    box-shadow: 0 0 20px rgba(176, 38, 255, 0.5); /* glow */
+    transition: 0.3s;
 }
 .btn:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(176, 38, 255, 0.8);
 }
+
 
 .header {
     position: fixed;
@@ -84,6 +92,8 @@ section {
     right: 0;
     display: flex;
     align-items: center;
+    height: 67px; /* controla a altura do cabeçalho */
+    padding: 0 20px; 
     justify-content: space-between;
     padding: 0 9%;
     z-index: 10000;
@@ -94,6 +104,14 @@ section {
     color: rgb(167, 167, 167);
     font-size: 3rem;
 }
+
+/* */
+.header .logo img {
+    height: 160px; /* controla o tamanho da imagem logo over */
+    width: auto;
+    object-fit: contain;  /* mantém proporção da imagem */
+}
+/* fim*/
 .header .logo span {
     color: rgb(205, 205, 203);
 }
@@ -101,10 +119,12 @@ section {
     display: inline-block;
     padding: 1.5rem 2rem;
     font-size: 1.7rem;
-    color: #fff;
+    color: #fff;  
 }
 .header .navbar a:hover {
-    background: rgb(150, 150, 150);
+    transform: translateY(-3px);
+    color: #b026ff;/*cabeçalho*/
+   
 }
 #menu-btn {
     font-size: 3rem;
@@ -124,19 +144,41 @@ section {
     padding: 2rem 9%;
     display: flex;
     align-items: center;
+    position: relative; /*  ADICIONADO ISSO */
 }
+.home .slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); /* escurece imagem */
+}   /* FIM */
+/*inicio */
+.home .slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at right, rgba(106,0,255,0.3), transparent 60%);
+}   /*FIM*/
+
 .home .slide .content {
     width: 60rem;
-}
+    position: relative;
+    z-index: 2; /*  ISSO FAZ O TEXTO APARECER */
+} /*fim*/
+
 .home .slide .content span {
     font-size: 2rem;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255); /*texto pricincipal(OVERworld, a sua hist.. */
     display: block;
 }
 .home .slide .content h3 {
     font-size: 5rem;
     color: #fff;
     padding: 1rem 0;
+    letter-spacing: 2px; /* deixa mais forte */
+    text-shadow: 
+        0 0 15px rgba(0,0,0,0.9),
+        0 0 25px rgba(106,0,255,0.4); /* glow + contraste */
 }
 
 .swiper-pagination-bullet {
@@ -146,14 +188,14 @@ section {
     border-radius: 0;
 }
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background: rgb(150, 150, 150);
+    background: rgb(150, 27, 168); /*rolagem carrosel(...) */
 }
 
 .about {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8rem;
+    gap: 4rem;  /* diminuí espaçamento*/
 }
 .about .image {
     flex: 1 1 42rem;
@@ -164,7 +206,7 @@ section {
     content: '';
     position: absolute;
     z-index: -1;
-    background: rgb(153, 153, 153);
+    background: linear-gradient(135deg, #6a00ff, #ff00cc);
     height: 15rem;
     width: 15rem;
 }
@@ -182,6 +224,7 @@ section {
 }
 .about .content {
     flex: 1 1 42rem;
+    max-width: 50rem; /* limita largura pra ficar mais elegante */
 }
 .about .content span {
     font-size: 2rem;
@@ -191,12 +234,13 @@ section {
     font-size: 4rem;
     color: #fff;
     margin-top: .5rem;
-}
+} 
+/*alteração  */
 .about .content p {
     font-size: 1.5rem;
-    color: #dedada;
-    padding: 1rem 0;
-    line-height: 2;
+    color:  #cfcfcf;
+    padding: 0.8rem 0;
+    line-height: 1.8;
 }
 .about .content .box-container {
     display: flex;
@@ -206,14 +250,14 @@ section {
 }
 .about .content .box-container .box {
     flex: 1 1 20rem;
-}
+}   
 .about .content .box-container .box h3 {
     font-size: 2rem;
-    color: #fff;
+    color: rgb(150, 27, 168);
 }
 .about .content .box-container .box h3 i {
     padding-right: 1.5rem;
-    color: rgb(144, 0, 120);
+    color: rgb(255, 255, 255);
 }
 
 .features .box-container {
@@ -260,7 +304,7 @@ section {
     color: #aaa;
     padding: 1rem 0;
 }
-
+ /* parte do css de preços( retirar) */
 .pricing {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
@@ -283,7 +327,7 @@ section {
 }
 .pricing .information p i {
     padding-right: 1rem;
-    color: rgb(144, 0, 110);
+    color: rgb(150, 27, 168);
 }
 .pricing .plan {
     text-align: center;
@@ -300,7 +344,7 @@ section {
 .pricing .plan .price {
     font-size: 5rem;
     font-weight: bolder;
-    color: rgb(144, 0, 173);
+    color: rgb(150, 27, 168);
 }
 .pricing .plan .price span {
     color: #fff;
@@ -317,9 +361,10 @@ section {
 }
 .pricing .plan .list p i {
     padding-right: 1rem;
-    color: rgb(146, 0, 134);
-}
+    color: rgb(150, 27, 168);
+}/* FIM DA PARTE DE PREÇOS   */
 
+/*  personais  */
 .trainers .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
@@ -350,7 +395,7 @@ section {
 .trainers .box-container .box .content span {
     font-size: 1.5rem;
     color: rgb(255, 255, 255);
-}
+}  
 .trainers .box-container .box .content h3 {
     font-size: 2rem;
     color: #fff;
@@ -522,7 +567,7 @@ section {
     padding: 1rem 3rem;
 }
 .footer .box-container .box .links:hover {
-    color: rgb(145, 0, 126);
+    color: rgb(150, 27, 168);
 }
 .footer .box-container .box p {
     font-size: 1.5rem;
@@ -548,7 +593,7 @@ section {
     text-align: center;
 }
 .footer .box-container .box .share a:hover {
-    background: rgb(144, 0, 105);
+    background: rgb(150, 27, 168);
 }
 .footer .box-container .box form {
     margin-left: 2rem;
@@ -561,6 +606,20 @@ section {
     font-size: 1.5rem;
     color: #fff;
 }
+
+/* */
+
+.about .content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.about .content h2 {
+    font-size: 2.2rem;
+    margin-top: 2rem;
+    color: #961BA8;
+}
+/* */
 
 /*Responsividade*/
 @media (max-width: 991px) {
@@ -622,6 +681,7 @@ section {
     .features .box-container .box.second {
         flex-flow: column;
     }
+    
 }
 
 @media (max-width: 450px) {
