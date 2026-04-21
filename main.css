@@ -8,7 +8,7 @@
     text-decoration: none;
     outline: none;
     border: none;
-    text-transform: none; /* âœ… CORREÃ‡ÃƒO: vocÃª controla as maiÃºsculas direto no HTML */
+    text-transform: none;
     transition: all .2s linear;
 }
 
@@ -28,7 +28,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-    background: rgb(150, 27, 168) /* barra de rolagem  */
+    background: rgb(150, 27, 168);
 }
 
 body {
@@ -68,15 +68,12 @@ section {
     display: inline-block;
     padding: 1rem 2.8rem;
     padding-right: 3rem;
-    background: linear-gradient(135deg, #6a00ff, #8c14d1); /* botão inteiro sem o corte la lateral */
+    background: linear-gradient(135deg, #6a00ff, #8c14d1);
     color: #fff;
     cursor: pointer;
     font-size: 1.7rem;
-     /*INICIO */
-     cursor: pointer;
-    font-size: 1.7rem;
-    border-radius: 8px; /* deixa moderno */
-    box-shadow: 0 0 20px rgba(176, 38, 255, 0.5); /* glow */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(176, 38, 255, 0.5);
     transition: 0.3s;
 }
 .btn:hover {
@@ -92,7 +89,7 @@ section {
     right: 0;
     display: flex;
     align-items: center;
-    height: 67px; /* controla a altura do cabeçalho */
+    height: 67px;
     padding: 0 20px; 
     justify-content: space-between;
     padding: 0 9%;
@@ -105,13 +102,12 @@ section {
     font-size: 3rem;
 }
 
-/* */
 .header .logo img {
-    height: 160px; /* controla o tamanho da imagem logo over */
+    height: 160px;
     width: auto;
-    object-fit: contain;  /* mantém proporção da imagem */
+    object-fit: contain;
 }
-/* fim*/d
+
 .header .logo span {
     color: rgb(205, 205, 203);
 }
@@ -123,8 +119,7 @@ section {
 }
 .header .navbar a:hover {
     transform: translateY(-3px);
-    color: #b026ff;/*cabeçalho*/
-   
+    color: #b026ff;
 }
 #menu-btn {
     font-size: 3rem;
@@ -144,41 +139,40 @@ section {
     padding: 2rem 9%;
     display: flex;
     align-items: center;
-    position: relative; /*  ADICIONADO ISSO */
+    position: relative;
 }
 .home .slide::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6); /* escurece imagem */
-}   /* FIM */
-/*inicio */
+    background: rgba(0, 0, 0, 0.6);
+}
 .home .slide::after {
     content: "";
     position: absolute;
     inset: 0;
     background: radial-gradient(circle at right, rgba(106,0,255,0.3), transparent 60%);
-}   /*FIM*/
+}
 
 .home .slide .content {
     width: 60rem;
     position: relative;
-    z-index: 2; /*  ISSO FAZ O TEXTO APARECER */
-} /*fim*/
+    z-index: 2;
+}
 
 .home .slide .content span {
     font-size: 2rem;
-    color: rgb(255, 255, 255); /*texto pricincipal(OVERworld, a sua hist.. */
+    color: rgb(255, 255, 255);
     display: block;
 }
 .home .slide .content h3 {
     font-size: 5rem;
     color: #fff;
     padding: 1rem 0;
-    letter-spacing: 2px; /* deixa mais forte */
+    letter-spacing: 2px;
     text-shadow: 
         0 0 15px rgba(0,0,0,0.9),
-        0 0 25px rgba(106,0,255,0.4); /* glow + contraste */
+        0 0 25px rgba(106,0,255,0.4);
 }
 
 .swiper-pagination-bullet {
@@ -188,14 +182,14 @@ section {
     border-radius: 0;
 }
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background: rgb(150, 27, 168); /*rolagem carrosel(...) */
+    background: rgb(150, 27, 168);
 }
 
 .about {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 4rem;  /* diminuí espaçamento*/
+    gap: 4rem;
 }
 .about .image {
     flex: 1 1 42rem;
@@ -224,7 +218,7 @@ section {
 }
 .about .content {
     flex: 1 1 42rem;
-    max-width: 50rem; /* limita largura pra ficar mais elegante */
+    max-width: 50rem;
 }
 .about .content span {
     font-size: 2rem;
@@ -235,14 +229,13 @@ section {
     color: #fff;
     margin-top: .5rem;
 } 
-/*alteração  */
 .about .content p {
     font-size: 1.5rem;
     color:  #cfcfcf;
     padding: 0.8rem 0;
     line-height: 1.8;
-    text-align: justify; /* justificado texto */
-    text-justify: inter-word; /* */
+    text-align: justify;
+    text-justify: inter-word;
 }
 .about .content .box-container {
     display: flex;
@@ -306,7 +299,7 @@ section {
     color: #aaa;
     padding: 1rem 0;
 }
- /* parte do css de preços( retirar) */
+
 .pricing {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
@@ -364,7 +357,7 @@ section {
 .pricing .plan .list p i {
     padding-right: 1rem;
     color: rgb(150, 27, 168);
-}/* FIM DA PARTE DE PREÇOS   */
+}
 
 /*  personais  */
 .trainers .box-container {
@@ -426,13 +419,19 @@ section {
     text-align: center;
 }
 .banner span {
-    font-size: 2rem;
+    font-size: 3rem;
     color: rgb(255, 255, 255);
+}
+.banner i {
+    font-size: 4rem;
+    color: #961BA8;
+    margin-bottom: 1rem;
+    display: block;
 }
 .banner h3 {
     padding-top: 1rem;
     color: #fff;
-    text-transform: uppercase; /* âœ… mantido intencional no banner */
+    text-transform: uppercase;
     font-size: 3.5rem;
 }
 .banner p {
@@ -564,14 +563,19 @@ section {
 }
 
 .footer .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 9%;
 }
 .footer .box-container .box h3 {
     font-size: 2.2rem;
     color: #fff;
     padding: 1rem 1rem;
+}
+.footer .box-container .box h3 i {
+    margin-right: 0.8rem;
+    color: #961BA8;
 }
 .footer .box-container .box .links {
     font-size: 1.5rem;
@@ -620,7 +624,24 @@ section {
     color: #fff;
 }
 
-/* */
+.footer .box-container .box .schedule p {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    font-size: 2.5rem;
+    color: #aaa;
+    padding: 0.6rem 0;
+    border-bottom: 0.1rem solid #1a1a1a;
+}
+
+.footer .box-container .box .schedule p span {
+    color: #fff;
+}
+
+.footer .box-container .box .schedule p i {
+    color: #961BA8;
+    font-style: normal;
+}
 
 .about .content h1 {
     font-size: 3.5rem;
@@ -632,7 +653,18 @@ section {
     margin-top: 2rem;
     color: #961BA8;
 }
-/* */
+
+.footer-logo {
+    text-align: center;
+    padding: 2rem 0;
+    background: #000;
+}
+
+.footer-logo img {
+    height: 20rem;
+    width: auto;
+    opacity: 0.8;
+}
 
 /*Responsividade*/
 @media (max-width: 991px) {
@@ -695,10 +727,9 @@ section {
         flex-flow: column;
     }
     .banners-container {
-    flex-direction: column;
-    padding: 0 2rem;
-}
-    
+        flex-direction: column;
+        padding: 0 2rem;
+    }
 }
 
 @media (max-width: 450px) {
