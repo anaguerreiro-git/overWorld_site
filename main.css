@@ -417,7 +417,7 @@ section {
 
 .banner {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-    url(img/FITNESS\ CENTER\ _\ GYM.jpeg) no-repeat;
+    url(img/leg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -439,6 +439,17 @@ section {
     font-size: 1.5rem;
     color: #aaa;
     line-height: 2;
+}
+.banners-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 9%;
+}
+
+.banners-container .banner {
+    flex: 1 1 30rem;
 }
 
 .review {
@@ -681,6 +692,10 @@ section {
     .features .box-container .box.second {
         flex-flow: column;
     }
+    .banners-container {
+    flex-direction: column;
+    padding: 0 2rem;
+}
     
 }
 
