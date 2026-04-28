@@ -1,13 +1,17 @@
+console.log("JS carregado");
 let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.header .navbar');
+let extra = document.querySelector('.header-extra'); //  NOVO
 
 menu.onclick = () =>{
     menu.classList.toggle('fa-times');
     navbar.classList.toggle('active');
+    extra.classList.toggle('active'); //  NOVO
 };
 window.onscroll = () =>{
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
+    extra.classList.remove('active'); //  NOVO
 };
 /* Slides */
 
