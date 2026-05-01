@@ -139,11 +139,11 @@ section {
 /* ===== HOME ===== */
 .home {
     padding: 0;
-    margin-top: 5rem;
+    margin-top: 0;
 }
 
 .home .slide {
-    min-height: 90vh;
+    min-height: 100vh;
     background-size: cover !important;
     background-position: center !important;
     padding: 2rem 9%;
@@ -152,52 +152,113 @@ section {
     position: relative;
 }
 
-.home .slide::before {
+.home .slide:before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(
+        105deg,
+        rgba(0, 0, 0, 0.90) 0%,
+        rgba(0, 0, 0, 0.75) 40%,
+        rgba(80, 0, 120, 0.30) 70%,
+        rgba(106, 0, 255, 0.10) 100%
+    );
+    z-index: 1;
 }
 
-.home .slide::after {
+.home .slide:after {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at right, rgba(106, 0, 255, 0.3), transparent 60%);
+    background: radial-gradient(
+        ellipse at 85% 50%,
+        rgba(176, 38, 255, 0.20) 0%,
+        transparent 55%
+    );
+    z-index: 1;
 }
 
 .home .slide .content {
-    width: 80rem;
+    width: 75rem;
+    max-width: 90%;
     position: relative;
     z-index: 2;
 }
 
+.home .slide .content:before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #b026ff, transparent);
+    border-radius: 2px;
+}
+
 .home .slide .content span {
-    font-size: 2rem;
-    color: rgb(255, 255, 255);
-    display: block;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #b026ff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-left: 3px solid #b026ff;
+    padding-left: 1.2rem;
+    margin-bottom: 1.8rem;
+    opacity: 0.9;
 }
 
 .home .slide .content h3 {
     font-size: 4rem;
-    color: #fff;
-    padding: 1rem 0;
-    letter-spacing: 2px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.02;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
     text-shadow:
-        0 0 15px rgba(0, 0, 0, 0.9),
-        0 0 25px rgba(106, 0, 255, 0.4);
+        0 2px 40px rgba(0, 0, 0, 0.9),
+        0 0 60px rgba(106, 0, 255, 0.15);
+}
+
+.home .slide .content .btn {
+    display: inline-block;
+    padding: 1.2rem 3.2rem;
+    background: transparent;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: 2px solid rgba(176, 38, 255, 0.7);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.home .slide .content .btn:hover {
+    border-color: #b026ff;
+    color: #fff;
+    box-shadow: 0 0 25px rgba(176, 38, 255, 0.4);
 }
 
 .swiper-pagination-bullet {
-    height: 2rem;
-    width: 2rem;
-    background: #fff;
-    border-radius: 0;
+    height: 4px;
+    width: 28px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    transition: all 0.3s ease;
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background: rgb(150, 27, 168);
-}
+    background: #b026ff;
+    width: 48px;
+    box-shadow: 0 0 10px rgba(176, 38, 255, 0.6);
+} /*novo home*/
 
 /* ===== ABOUT ===== */
 .about {
@@ -705,7 +766,7 @@ section {
 @media (max-width: 991px) {
     html {
         font-size: 55%;
-        scroll-padding: 7rem;
+        scroll-padding: 6rem;
     }
 
     .header {
@@ -724,9 +785,10 @@ section {
         width: 50rem;
     }
 
-    .home .slide .content h3 {
-        font-size: 4rem;
-    }
+    .home .slide .content h3 { /*novo*/
+    font-size: 5rem;
+    letter-spacing: -1px;
+}
 }
 
    @media (max-width: 768px) {
@@ -793,6 +855,28 @@ section {
         flex-direction: column;
         padding: 0 2rem;
     }
+    /*novo*/
+    .home .slide {
+    min-height: 85vh;
+    align-items: flex-end;
+    padding-bottom: 8rem;
+    }
+
+    .home .slide .content h3 {
+    font-size: 3.8rem;
+    letter-spacing: -0.5px;
+    }
+
+    .home .slide .content span {
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    }
+
+    .home .slide .content:before { /*novo*/
+    display: none;
+    background: linear-gradient(to right, rgba(0,0,0,0.85) 40%, rgba(80,0,120,0.2) 100%);
+
+    } /*fim novo*/
 }
 
 @media (max-width: 450px) {
