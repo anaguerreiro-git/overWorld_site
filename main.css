@@ -34,6 +34,10 @@ html::-webkit-scrollbar-thumb {
 body {
     background: #000;
 }
+/*novo*/
+.reveal {
+    opacity: 0;
+}
 
 section {
     padding: 5rem 9%;
@@ -272,33 +276,34 @@ section {
 .about .image {
     flex: 1 1 42rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .about .image::before,
 .about .image::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    background: linear-gradient(135deg, #6a00ff, #ff00cc);
-    height: 15rem;
-    width: 15rem;
-}
-
-.about .image::before {
-    top: 0;
-    left: 0;
-}
-
-.about .image::after {
-    bottom: 0;
-    right: 0;
+    display: none;
 }
 
 .about .image img {
     width: 100%;
-    padding: 2rem;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(155, 93, 229, 0.4);
+    box-shadow: 
+        0 0 20px rgba(155, 93, 229, 0.3),
+        0 0 60px rgba(155, 93, 229, 0.15),
+        inset 0 0 30px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.4s ease;
 }
 
+.about .image img:hover {
+    box-shadow: 
+        0 0 35px rgba(176, 38, 255, 0.5),
+        0 0 80px rgba(176, 38, 255, 0.25);
+}
 .about .content {
     max-width: 500px;
 }
@@ -896,4 +901,163 @@ section {
     #menu-btn {
         display: none !important;
     }
+}
+/* modalidades */
+.modalidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 1.5rem 0;
+}
+
+.tag {
+    background: transparent;
+    border: 1px solid #9b5de5;
+    color: #c77dff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: #9b5de5;
+    color: #fff;
+}
+/* botão matricule-se header */
+.btn-matricula {
+    background: #3a0344;
+    color: #fff !important;
+    padding: 0.8rem 2rem !important;
+    border-radius: 8px;
+    font-size: 1.4rem !important;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.btn-matricula:hover {
+    background: #4d2281;
+    transform: scale(1.05);
+    color: #fff !important;
+}
+
+/* métricas */
+.metricas {
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(155, 93, 229, 0.3);
+}
+
+.metrica {
+    text-align: center;
+    flex: 1 1 8rem;
+    padding: 1.5rem 1rem;
+    border-right: 1px solid rgba(155, 93, 229, 0.2);
+}
+
+.metrica:last-child {
+    border-right: none;
+}
+
+.metrica i {
+    font-size: 2.2rem;
+    color: #9b5de5;
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+.metrica h3 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #c77dff;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.metrica p {
+    font-size: 1.2rem !important;
+    color: #888 !important;
+    margin-top: 0.3rem;
+    padding: 0 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* abas do sobre */
+.about-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+}
+
+.about-tab-label {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #c77dff;
+    letter-spacing: 0.05em;
+    min-width: 160px;
+    text-align: center;
+}
+
+.about-prev,
+.about-next {
+    background: transparent;
+    border: 1px solid rgba(155, 93, 229, 0.4) !important;
+    border-radius: 50% !important;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #c77dff;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    padding: 0 !important;
+}
+
+.about-prev:hover,
+.about-next:hover {
+    background: #9b5de5 !important;
+    color: #fff;
+    border-color: #9b5de5 !important;
+}
+
+.about-tabs {
+    position: relative;
+    min-height: 280px;
+}
+
+.about-tab {
+    display: none;
+    animation: fadeTab 0.5s ease;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.about-tab.active {
+    display: block;
+}
+
+@keyframes fadeTab {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.about-tab blockquote {
+    margin-top: 2rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid #9b5de5;
+    color: #888;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.6;
 }
