@@ -1111,3 +1111,290 @@ section {
 .links a:hover {
     color: #00bcd4;
 }
+
+.pilates {
+    padding: 50px;
+    background: #111;
+    color: #fff;
+}
+
+.sub-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.pilates-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-box video {
+    width: 500px;
+    border-radius: 10px;
+}
+
+.benefits-box {
+    max-width: 400px;
+}
+
+.benefits-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.benefits-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-box ul li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* ===== PILATES (COLETIVAS) ===== */
+
+.pilates {
+    padding: 6rem 9%;
+    background: #0a0a0a;
+}
+
+.sub-heading {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #fff;
+    margin-bottom: 4rem;
+    letter-spacing: 1px;
+}
+
+.pilates-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* VÍDEO */
+.video-box {
+    flex: 1 1 45rem;
+    display: flex;
+    justify-content: center;
+}
+
+.video-box video {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 1rem;
+    border: 1px solid rgba(155, 93, 229, 0.4);
+    box-shadow: 
+        0 0 20px rgba(155, 93, 229, 0.3),
+        0 0 60px rgba(155, 93, 229, 0.15);
+    transition: 0.4s;
+}
+
+.video-box video:hover {
+    transform: scale(1.02);
+    box-shadow: 
+        0 0 35px rgba(176, 38, 255, 0.5),
+        0 0 80px rgba(176, 38, 255, 0.25);
+}
+
+/* BENEFÍCIOS */
+.benefits-box {
+    flex: 1 1 40rem;
+    max-width: 500px;
+}
+
+.benefits-box h3 {
+    font-size: 2.2rem;
+    color: #c77dff;
+    margin-bottom: 2rem;
+}
+
+.benefits-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-box ul li {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.benefits-box ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #9b5de5;
+    font-weight: bold;
+}
+
+/* BOTÃO */
+.benefits-box .btn {
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .pilates-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .video-box video {
+        max-width: 100%;
+    }
+
+    .benefits-box {
+        text-align: center;
+    }
+
+    .benefits-box ul li {
+        padding-left: 0;
+    }
+
+    .benefits-box ul li::before {
+        position: static;
+        margin-right: 0.5rem;
+    }
+}
+
+/* ===== AULAS ===== */
+
+.aulas {
+    padding: 6rem 9%;
+    background: #000;
+}
+
+.aulas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+
+.aula-card {
+    background: #111;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(155, 93, 229, 0.3);
+    transition: 0.3s;
+}
+
+.aula-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(176, 38, 255, 0.3);
+}
+
+.aula-card h3 {
+    font-size: 2.2rem;
+    color: #c77dff;
+    margin-bottom: 1rem;
+}
+
+.aula-card p {
+    font-size: 1.4rem;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+}
+
+.tags span {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #1d0122;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin: 5px 5px 0 0;
+}
+
+/* ===== HORÁRIOS ===== */
+
+.horarios {
+    padding: 6rem 9%;
+    background: #0a0a0a;
+}
+
+.tabela {
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(155, 93, 229, 0.3);
+}
+
+.linha {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    text-align: center;
+}
+
+.linha span {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    color: #ccc;
+    border-bottom: 1px solid #222;
+}
+
+.linha.header {
+    background: #1d0122;
+}
+
+.linha.header span {
+    color: #c77dff;
+    font-weight: bold;
+}
+
+.linha span:first-child {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* hover nas aulas */
+.linha span:not(:first-child):hover {
+    background: rgba(176, 38, 255, 0.2);
+    cursor: pointer;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .linha {
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 1.2rem;
+    }
+}
+
+.btn {
+    background: linear-gradient(45deg, #56175E, #9b5de5);
+    box-shadow: 0 0 15px rgba(176, 38, 255, 0.3);
+}
+
+.btn:hover {
+    box-shadow: 0 0 30px rgba(176, 38, 255, 0.6);
+}
+
+.aula-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    background: linear-gradient(120deg, transparent, rgba(176,38,255,0.2), transparent);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.aula-card:hover::before {
+    opacity: 1;
+}
+
+::selection {
+    background: #9b5de5;
+    color: #fff;
+}
