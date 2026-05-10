@@ -10,6 +10,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
+
         .aula-hero {
             min-height: 40vh;
             background-size: cover;
@@ -20,13 +21,19 @@
             padding: 4rem 9%;
             margin-top: 69px;
         }
+
         .aula-hero::before {
             content: '';
             position: absolute;
             inset: 0;
             background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.85) 100%);
         }
-        .aula-hero-content { position: relative; z-index: 2; }
+
+        .aula-hero-content { 
+            position: relative;
+             z-index: 2; 
+        }
+
         .aula-hero-tag {
             display: inline-block;
             font-size: 1.1rem;
@@ -38,6 +45,7 @@
             padding-left: 1.2rem;
             margin-bottom: 1.2rem;
         }
+
         .aula-hero h1 {
             font-size: 6rem;
             font-weight: 800;
@@ -46,12 +54,14 @@
             letter-spacing: -2px;
             line-height: 1;
         }
+
         .aula-hero p {
             font-size: 1.8rem;
             color: rgba(255,255,255,0.7);
             margin-top: 1rem;
             max-width: 600px;
         }
+
         .aula-body {
             padding: 6rem 9%;
             background: #000;
@@ -59,8 +69,16 @@
             gap: 6rem;
             flex-wrap: wrap;
             align-items: flex-start;
+            justify-content: center;
         }
-        .aula-video-section { flex: 1 1 45rem; }
+
+        .aula-video-section { 
+            flex: 1 1 30rem; /*diminuição*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .aula-video-section h2, .aula-info-section h2 {
             font-size: 2.4rem;
             color: #fff;
@@ -71,15 +89,28 @@
             padding-bottom: 1rem;
             border-bottom: 2px solid #b026ff;
             display: inline-block;
-        }
+        } 
+
         .aula-video-section video {
-            width: 100%;
+            width: 60%;
+            max-width: 700px;
             border-radius: 1rem;
             border: 1px solid rgba(155, 93, 229, 0.4);
             box-shadow: 0 0 20px rgba(155, 93, 229, 0.2);
         }
-        .aula-info-section { flex: 1 1 35rem; max-width: 480px; }
-        .aula-beneficios { list-style: none; padding: 0; margin-bottom: 3rem; }
+
+        .aula-info-section { 
+            flex: 1 1 32rem; 
+            max-width: 420px; 
+        }
+
+        .aula-beneficios { 
+            list-style: none; 
+            padding: 0; 
+            margin-bottom: 3rem; 
+        
+        }
+
         .aula-beneficios li {
             font-size: 1.5rem;
             color: #ccc;
@@ -88,6 +119,7 @@
             position: relative;
             line-height: 1.5;
         }
+
         .aula-beneficios li::before {
             content: "✔";
             position: absolute;
@@ -95,7 +127,12 @@
             color: #9b5de5;
             font-weight: bold;
         }
-        .aula-tags { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem; }
+        .aula-tags { display: flex; 
+            flex-wrap: wrap; 
+            gap: 1rem; 
+            margin-bottom: 3rem; 
+        }
+
         .aula-tag {
             background: transparent;
             border: 1px solid #9b5de5;
@@ -104,6 +141,7 @@
             border-radius: 20px;
             font-size: 1.3rem;
         }
+
         .aula-btn {
             display: inline-block;
             padding: 1.4rem 3.5rem;
@@ -117,11 +155,17 @@
             box-shadow: 0 0 20px rgba(176, 38, 255, 0.3);
             transition: 0.3s;
         }
+
         .aula-btn:hover {
             box-shadow: 0 0 35px rgba(176, 38, 255, 0.6);
             transform: translateY(-2px);
         }
-        .outras-aulas { padding: 6rem 9%; background: #0a0a0a; }
+
+        .outras-aulas { 
+            padding: 6rem 9%;
+            background: #0a0a0a; 
+        }
+
         .outras-aulas h2 {
             font-size: 2.8rem;
             color: #fff;
@@ -131,11 +175,13 @@
             margin-bottom: 3rem;
             text-align: center;
         }
+
         .outras-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
             gap: 1.5rem;
         }
+
         .outra-card {
             background: #111;
             border: 1px solid rgba(155, 93, 229, 0.2);
@@ -144,27 +190,49 @@
             transition: 0.3s;
             text-decoration: none;
         }
+
         .outra-card:hover {
             border-color: rgba(176, 38, 255, 0.5);
             transform: translateY(-4px);
             box-shadow: 0 0 25px rgba(176, 38, 255, 0.15);
         }
-        .outra-card img { width: 100%; height: 140px; object-fit: cover; }
-        .outra-card-info { padding: 1.5rem; }
+        
+        .outra-card img { 
+            width: 100%; 
+            height: 140px; 
+            object-fit: cover; 
+        }
+
+        .outra-card-info { 
+            padding: 1.5rem; 
+        }
+
         .outra-card-info h3 {
             font-size: 1.8rem;
             color: #fff;
             font-weight: 800;
             text-transform: uppercase;
             margin-bottom: 0.5rem;
+        } 
+
+        .outra-card-info p { font-size: 1.3rem; 
+            color: #aaa; 
         }
-        .outra-card-info p { font-size: 1.3rem; color: #aaa; }
+
+        .aula-descricao {
+        font-size: 1.45rem;
+        color: #bdbdbd;
+        line-height: 1.8;
+        margin-bottom: 1.8rem;
+}
+
         @media (max-width: 768px) {
             .aula-hero h1 { font-size: 4rem; }
             .aula-body { flex-direction: column; gap: 4rem; padding: 4rem 5%; }
             .aula-info-section { max-width: 100%; }
             .outras-aulas { padding: 4rem 5%; }
         }
+
     </style>
 </head>
 
@@ -188,7 +256,7 @@
 
     <main>
 
-        <div class="aula-hero" style="background-image: url('img/pilates.png');">
+        <div class="aula-hero" style="background-image: url('img/pilates001.jpg');">
             <div class="aula-hero-content">
                 <div class="aula-hero-tag">Coletivas — OVERworld</div>
                 <h1>Pilates</h1>
@@ -206,29 +274,41 @@
                 </video>
             </div>
 
-            <div class="aula-info-section">
-                <h2>Benefícios</h2>
-                <ul class="aula-beneficios">
-                    <li>Melhora da postura e alinhamento corporal</li>
-                    <li>Fortalecimento muscular profundo</li>
-                    <li>Aumento da flexibilidade</li>
-                    <li>Redução do estresse e ansiedade</li>
-                    <li>Melhora da respiração e concentração</li>
-                    <li>Prevenção de lesões</li>
-                </ul>
-                <div class="aula-tags">
-                    <span class="aula-tag">Todos os níveis</span>
-                    <span class="aula-tag">Baixo impacto</span>
-                    <span class="aula-tag">Flexibilidade</span>
-                    <span class="aula-tag">Fortalecimento</span>
-                </div>
-                <a href="https://www.contate.me/5561981358742" class="aula-btn" target="_blank">
-                    Agendar Aula
-                </a>
-            </div>
+           <div class="aula-info-section">
 
-        </div>
+    <h2>Sobre a modalidade</h2>
 
+    <p class="aula-descricao">
+        O Pilates combina fortalecimento muscular, respiração e controle corporal
+        em movimentos fluidos e de baixo impacto. A modalidade ajuda no equilíbrio,
+        postura e consciência corporal, promovendo mais bem-estar no dia a dia.
+    </p>
+
+    <p class="aula-descricao">
+        As aulas são adaptáveis para diferentes níveis e focam na evolução gradual,
+        respeitando os limites e objetivos de cada aluno.
+    </p>
+
+    <h2>Benefícios</h2>
+
+    <ul class="aula-beneficios">
+        <li>Melhora da postura e alinhamento corporal</li>
+        <li>Fortalecimento muscular profundo</li>
+        <li>Aumento da flexibilidade</li>
+        <li>Redução do estresse e ansiedade</li>
+        <li>Melhora da respiração e concentração</li>
+        <li>Prevenção de lesões</li>
+    </ul>
+
+    <div class="aula-tags">
+        <span class="aula-tag">Todos os níveis</span>
+        <span class="aula-tag">Baixo impacto</span>
+        <span class="aula-tag">Flexibilidade</span>
+        <span class="aula-tag">Fortalecimento</span>
+    </div>
+
+</div>
+</div>
         <div class="outras-aulas">
             <h2>Outras Aulas</h2>
             <div class="outras-grid">
@@ -240,21 +320,21 @@
                     </div>
                 </a>
                 <a href="muaythai.html" class="outra-card">
-                    <img src="img/muaithai.jpeg" alt="Muay Thai">
+                    <img src="img/forro24.jpg" alt="Muay Thai">
                     <div class="outra-card-info">
                         <h3>Muay Thai</h3>
                         <p>Arte marcial e disciplina</p>
                     </div>
                 </a>
-                <a href="ritmos.html" class="outra-card">
+                <a href="fitdance.html" class="outra-card">
                     <img src="img/ritmos.png" alt="Ritmos">
                     <div class="outra-card-info">
-                        <h3>Ritmos</h3>
-                        <p>Dance e emagreça</p>
+                        <h3>Fit Dance</h3>
+                        <p>Dance</p>
                     </div>
                 </a>
                 <a href="jump.html" class="outra-card">
-                    <img src="img/jump.jpeg" alt="Jump">
+                    <img src="img/jump01.jpg" alt="Jump">
                     <div class="outra-card-info">
                         <h3>Jump</h3>
                         <p>Cardio na mini cama elástica</p>

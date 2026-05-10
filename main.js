@@ -165,7 +165,7 @@ const observer = new IntersectionObserver((entries) => {
             if (metricaAvaliacao) animarContador(metricaAvaliacao, 0, 5, 1200);
 
             if (metricaLocal) {
-                const texto = 'Brazlândia';
+                const texto = 'Localização';
                 metricaLocal.textContent = '';
                 let i = 0;
                 const digitar = setInterval(() => {

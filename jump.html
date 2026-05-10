@@ -46,21 +46,34 @@
             letter-spacing: -2px;
             line-height: 1;
         }
+
         .aula-hero p {
             font-size: 1.8rem;
             color: rgba(255,255,255,0.7);
             margin-top: 1rem;
             max-width: 600px;
         }
-        .aula-body {
-            padding: 6rem 9%;
-            background: #000;
-            display: flex;
-            gap: 6rem;
-            flex-wrap: wrap;
-            align-items: flex-start;
+
+        /* ALTERADO */
+       .aula-body {
+           padding: 6rem 9%;
+           background: #000;
+           display: flex;
+           gap: 6rem;
+           flex-wrap: wrap;
+           align-items: flex-start;
+           justify-content: center; 
         }
-        .aula-video-section { flex: 1 1 45rem; }
+
+        .aula-video-section { 
+            flex: 1 1 45rem; 
+            flex: 1 1 30rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
         .aula-video-section h2, .aula-info-section h2 {
             font-size: 2.4rem;
             color: #fff;
@@ -71,15 +84,28 @@
             padding-bottom: 1rem;
             border-bottom: 2px solid #b026ff;
             display: inline-block;
-        }
+        } 
+
+        /* ALTERADO */
         .aula-video-section video {
-            width: 100%;
+            width: 60%;
+            max-width: 700px;
             border-radius: 1rem;
             border: 1px solid rgba(155, 93, 229, 0.4);
             box-shadow: 0 0 20px rgba(155, 93, 229, 0.2);
+        } 
+        .aula-info-section { 
+            flex: 1 1 32rem;
+            max-width: 420px; 
         }
-        .aula-info-section { flex: 1 1 35rem; max-width: 480px; }
-        .aula-beneficios { list-style: none; padding: 0; margin-bottom: 3rem; }
+
+
+        .aula-beneficios { 
+            list-style: none; 
+            padding: 0; 
+            margin-bottom: 3rem; 
+        }
+
         .aula-beneficios li {
             font-size: 1.5rem;
             color: #ccc;
@@ -95,7 +121,12 @@
             color: #9b5de5;
             font-weight: bold;
         }
-        .aula-tags { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem; }
+        .aula-tags { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 1rem; margin-bottom: 3rem; 
+        }
+
         .aula-tag {
             background: transparent;
             border: 1px solid #9b5de5;
@@ -121,7 +152,11 @@
             box-shadow: 0 0 35px rgba(176, 38, 255, 0.6);
             transform: translateY(-2px);
         }
-        .outras-aulas { padding: 6rem 9%; background: #0a0a0a; }
+        .outras-aulas { 
+            padding: 6rem 9%; 
+            background: #0a0a0a; 
+        }
+
         .outras-aulas h2 {
             font-size: 2.8rem;
             color: #fff;
@@ -149,8 +184,23 @@
             transform: translateY(-4px);
             box-shadow: 0 0 25px rgba(176, 38, 255, 0.15);
         }
-        .outra-card img { width: 100%; height: 140px; object-fit: cover; }
-        .outra-card-info { padding: 1.5rem; }
+        .outra-card img { 
+            width: 100%; 
+            height: 140px; 
+            object-fit: cover; 
+        }
+        .outra-card-info { 
+            padding: 1.5rem; 
+        }
+
+        /* NOVO */
+        .aula-descricao {
+            font-size: 1.45rem;
+            color: #bdbdbd;
+            line-height: 1.8;
+            margin-bottom: 1.8rem;
+        }
+
         .outra-card-info h3 {
             font-size: 1.8rem;
             color: #fff;
@@ -188,7 +238,7 @@
 
     <main>
 
-        <div class="aula-hero" style="background-image: url('img/jump.jpeg');">
+        <div class="aula-hero" style="background-image: url('img/jump01.jpg');">
             <div class="aula-hero-content">
                 <div class="aula-hero-tag">Coletivas — OVERworld</div>
                 <h1>Jump</h1>
@@ -206,7 +256,23 @@
                 </video>
             </div>
 
-            <div class="aula-info-section">
+                <div class="aula-info-section">
+
+                    <h2>Sobre a modalidade</h2>
+
+                    <p class="aula-descricao">
+                        O Jump é uma aula dinâmica realizada na mini cama elástica,
+                        combinando exercícios aeróbicos com movimentos ritmados e
+                        muita energia. A modalidade trabalha o corpo inteiro de forma divertida
+                        e intensa.
+                    </p>
+
+                    <p class="aula-descricao">
+                        As aulas ajudam a melhorar o condicionamento físico,
+                        coordenação motora e resistência, além de proporcionar
+                        mais disposição e bem-estar no dia a dia.
+                    </p>
+
                 <h2>Benefícios</h2>
                 <ul class="aula-beneficios">
                     <li>Queima de calorias e emagrecimento</li>
@@ -240,24 +306,24 @@
                     </div>
                 </a>
                 <a href="muaythai.html" class="outra-card">
-                    <img src="img/muaithai.jpeg" alt="Muay Thai">
+                    <img src="img/forro24.jpg" alt="Muay Thai">
                     <div class="outra-card-info">
                         <h3>Muay Thai</h3>
                         <p>Arte marcial e disciplina</p>
                     </div>
                 </a>
-                <a href="ritmos.html" class="outra-card">
+                <a href="fitdance.html" class="outra-card">
                     <img src="img/ritmos.png" alt="Ritmos">
                     <div class="outra-card-info">
-                        <h3>Ritmos</h3>
+                        <h3>Fit Dance</h3>
                         <p>Dance e emagreça</p>
                     </div>
                 </a>
-                <a href="hiit.html" class="outra-card">
-                    <img src="img/hit.jpeg" alt="HIIT">
+                <a href="forro.html" class="outra-card">
+                    <img src="img/forro9.jpg" alt="FORRÓ">
                     <div class="outra-card-info">
-                        <h3>HIIT</h3>
-                        <p>Treino de alta intensidade</p>
+                        <h3>Forró</h3>
+                        <p>Aprenda, dance e se apaixone pelo forró.</p>
                     </div>
                 </a>
             </div>
