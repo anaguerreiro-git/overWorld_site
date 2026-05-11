@@ -203,7 +203,7 @@ section {
     display: inline-block;
     font-size: 1.1rem;
     font-weight: 700;
-    color: #b026ff;
+    color: #c77dff;
     letter-spacing: 4px;
     text-transform: uppercase;
     border-left: 3px solid #b026ff;
@@ -213,7 +213,7 @@ section {
 }
 
 .home .slide .content h3 {
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 800;
     color: #ffffff;
     line-height: 1.02;
@@ -258,7 +258,7 @@ section {
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background: #b026ff;
+    background: #fff;
     width: 48px;
     box-shadow: 0 0 10px rgba(176, 38, 255, 0.6);
 } /*novo home*/
@@ -726,13 +726,13 @@ section {
 
 .products .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(24.8rem, 1fr));
     gap: 2rem;
 }
 
 .products .box {
     background: #111;
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
     border-radius: 1rem;
     transition: 0.3s;
@@ -743,20 +743,20 @@ section {
 }
 
 .products .box img {
-    width: 75%;
-    height: 200px;
+    width: 65%;
+    height: 160px;
     object-fit: cover;
     border-radius: .5rem;
 }
 
 .products .box h3 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: #fff;
-    margin: 1rem 0;
+    margin: .8rem 0;
 }
 
 .products .box p {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: #aaa;
 }
 
@@ -1389,12 +1389,12 @@ section {
 }
 
 .btn {
-    background: linear-gradient(45deg, #56175E, #9b5de5);
-    box-shadow: 0 0 15px rgba(176, 38, 255, 0.3);
+    background: linear-gradient(45deg, #56175E);
 }
 
 .btn:hover {
-    box-shadow: 0 0 30px rgba(176, 38, 255, 0.6);
+    transform: scale(1.05);
+    box-shadow: none;
 }
 
 .aula-card:hover::before {
@@ -1404,4 +1404,78 @@ section {
 ::selection {
     background: #9b5de5;
     color: #fff;
+}
+
+/* ===== hero(produtos) ===== */
+
+.products-hero {
+    min-height: 40vh;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 4rem 9%;
+    margin-top: 69px;
+}
+
+.products-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.3) 0%,
+        rgba(0,0,0,0.85) 100%
+    );
+}
+
+.products-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.products-eyebrow {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #b026ff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-left: 3px solid #b026ff;
+    padding-left: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.products-hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.products-hero p {
+    font-size: 1.8rem;
+    color: rgba(255,255,255,0.7);
+    margin-top: 1rem;
+    max-width: 600px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+    .products-hero {
+        min-height: 32vh;
+        padding: 3rem 5%;
+    }
+
+    .products-hero h1 {
+        font-size: 4rem;
+    }
+
+    .products-hero p {
+        font-size: 1.5rem;
+    }
 }

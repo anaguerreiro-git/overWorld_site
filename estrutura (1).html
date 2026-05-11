@@ -20,13 +20,13 @@
         <div id="menu-btn" class="fas fa-bars"></div>
 
         <nav class="navbar">
-            <a href="#home">Início</a>
-            <a href="#about">Sobre</a>
-            <a href="#features">Nossos Serviços</a>
-            <a href="#trainers">Treinadores</a>
-            <a href="#blogs">Eventos</a>
-            <a href="patrocinios.html">Patrocínios</a>
-            <a href="acoes_sociais.html">Ações Sociais</a>
+            <a href="overworld.html#home">Início</a>
+            <a href="overworld.html#about">Sobre</a>
+            <a href="overworld.html#features">Nossos Serviços</a>
+            <a href="overworld.html#trainers">Treinadores</a>
+            <a href="overworld.html#blogs">Eventos</a>
+           <!-- <a href="patrocinios.html">Patrocínios</a>
+            <a href="acoes_sociais.html">Ações Sociais</a>-->
             <a href="produtos.html">Produtos</a>
             <a href="https://www.contate.me/5561981358742" target="_blank" class="btn-matricula">Matricule-se</a>
         </nav>
@@ -34,12 +34,12 @@
 
     <main>
 
-        <section class="est-hero" style="background: url('img/estrutura01.jpg') center/cover no-repeat;">
+        <section class="est-hero" style="background: url('img/estrutura01Editada.png') center/cover no-repeat;">
             <div class="est-hero-overlay"></div>
             <div class="est-hero-content">
                 <span class="est-eyebrow">ESTRUTURA — OVERWORLD</span>
                 <h1>ESTRUTURA</h1>
-                <p>Um espaço pensado para você treinar com conforto, segurança e qualidade.</p>
+
             </div>
         </section>
 
@@ -91,7 +91,7 @@
                             <button class="mini-prev"><i class="fas fa-chevron-left"></i></button>
                             <div class="mini-track">
                                 <img class="mini-foto ativa" src="img/areaColetivas.jpg" alt="Coletivas">
-                                <img class="mini-foto" src="img/coletiva.jpg" alt="Coletivas">
+                                <img class="mini-foto" src="img/forro24.jpg" alt="Coletivas">
                                 <img class="mini-foto" src="img/armario.jpg" alt="Coletivas">
                             </div>
                             <button class="mini-next"><i class="fas fa-chevron-right"></i></button>
@@ -109,7 +109,7 @@
                             <div class="mini-track">
                                 <img class="mini-foto ativa" src="img/estrutura03.jpg" alt="Estrutura">
                                 <img class="mini-foto" src="img/estrutura04.jpg" alt="Estrutura">
-                                <img class="mini-foto" src="img/estrutura05.jpg" alt="Estrutura">
+                                <img class="mini-foto" src="img/estrutura05.png" alt="Estrutura">
                             </div>
                             <button class="mini-next"><i class="fas fa-chevron-right"></i></button>
                         </div>
@@ -209,9 +209,9 @@
 
         .est-eyebrow {
             display: block;
-            font-size: .85rem;
+            font-size: 1.4rem;
             letter-spacing: .25em;
-            color: var(--main-color);
+            color: #c77dff;
             font-weight: 700;
             margin-bottom: 1rem;
             border-left: 3px solid var(--main-color);
@@ -219,7 +219,7 @@
         }
 
         .est-hero-content h1 {
-            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-size: clamp(2.6rem, 6vw, 5rem);
             color: #fff;
             line-height: 1;
             margin-bottom: 1rem;
@@ -252,14 +252,14 @@
         .carr-slide.ativo { display: flex; }
 
         .carr-texto h3 {
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             color: #4c0a81;
             margin-bottom: 1rem;
         }
 
         .carr-texto p {
             color: #ccc;
-            font-size: 1.6rem;
+            font-size: 1.9rem;
             line-height: 1.8;
         }
 
@@ -269,7 +269,7 @@
             color: #8f1abd;
             width: 48px;
             height: 48px;
-            font-size: 1.1rem;
+            font-size: 2rem;
             cursor: pointer;
             flex-shrink: 0;
             display: flex;
@@ -337,17 +337,38 @@
         }
 
         .mini-prev:hover,
-        .mini-next:hover { background: var(--main-color); }
+        .mini-next:hover { 
+            background: var(--main-color); 
+        }
 
-        .mini-prev { left: 8px; }
-        .mini-next { right: 8px; }
+        .mini-prev { 
+            left: 8px; 
+        }
+
+        .mini-next { 
+            right: 8px; 
+        }
 
         @media (max-width: 700px) {
-            .carr-slide.ativo { flex-direction: column; }
-            .mini-carr { width: 100%; max-width: 100%; }
-            .mini-foto { height: 240px; }
-            .est-hero { height: 420px; }
+            .carr-slide.ativo { 
+                flex-direction: column; 
+            }
+
+            .mini-carr { 
+                width: 100%; 
+                max-width: 100%; 
+            }
+
+            .mini-foto { 
+                height: 240px; 
+            }
+
+            .est-hero { 
+                height: 420px; 
+            }
+
         }
+        
     </style>
 
     <script src='./main.js'></script>
