@@ -34,6 +34,7 @@ html::-webkit-scrollbar-thumb {
 body {
     background: #000;
 }
+
 /*novo*/
 .reveal {
     opacity: 0;
@@ -159,13 +160,11 @@ section {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        105deg,
-        rgba(0, 0, 0, 0.90) 0%,
-        rgba(0, 0, 0, 0.75) 40%,
-        rgba(80, 0, 120, 0.30) 70%,
-        rgba(106, 0, 255, 0.10) 100%
-    );
+    background: linear-gradient(105deg,
+            rgba(0, 0, 0, 0.90) 0%,
+            rgba(0, 0, 0, 0.75) 40%,
+            rgba(80, 0, 120, 0.30) 70%,
+            rgba(106, 0, 255, 0.10) 100%);
     z-index: 1;
 }
 
@@ -173,11 +172,9 @@ section {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(
-        ellipse at 85% 50%,
-        rgba(176, 38, 255, 0.20) 0%,
-        transparent 55%
-    );
+    background: radial-gradient(ellipse at 85% 50%,
+            rgba(176, 38, 255, 0.20) 0%,
+            transparent 55%);
     z-index: 1;
 }
 
@@ -261,7 +258,9 @@ section {
     background: #fff;
     width: 48px;
     box-shadow: 0 0 10px rgba(176, 38, 255, 0.6);
-} /*novo home*/
+}
+
+/*novo home*/
 
 /* ===== ABOUT ===== */
 .about {
@@ -295,10 +294,11 @@ section {
 }
 
 .about .image img:hover {
-    box-shadow: 
+    box-shadow:
         0 0 35px rgba(176, 38, 255, 0.5),
         0 0 80px rgba(176, 38, 255, 0.25);
 }
+
 .about .content {
     max-width: 500px;
 }
@@ -604,54 +604,60 @@ section {
 /* ===== EVENTOS ===== */
 
 .blogs .slide {
-   background: #111; 
-   margin-bottom: 7rem; }
-
-.blogs .slide:hover .image img { 
-    transform: scale(1.1); }
-
-.blogs .slide .image { 
-    height: 25rem; width: 100%; 
-    overflow: hidden; 
-} 
-    .blogs .slide .image img { 
-    height: 100%; 
-    width: 100%; 
-    object-fit: cover; 
-} 
-
-.blogs .slide .content { 
-    padding: 2rem; 
-} 
-    
-.blogs .slide .content .link { 
-    padding-bottom: 1.5rem; 
-    font-size: 1.5rem; 
-} 
-    
-.blogs .slide .content .link a { 
-    color: rgb(255, 255, 255); 
-
-} .blogs .slide .content .link a:hover { 
-    color: #fff; 
+    background: #111;
+    margin-bottom: 7rem;
 }
-    
-.blogs .slide .content .link span {
-     color: #fff; 
-     padding: 0 1rem; 
-} 
 
-.blogs .slide .content h3 { 
-    font-size: 2rem; 
-    color: #fff; 
-    line-height: 1.5; 
-} 
-    
+.blogs .slide:hover .image img {
+    transform: scale(1.1);
+}
+
+.blogs .slide .image {
+    height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.blogs .slide .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blogs .slide .content {
+    padding: 2rem;
+}
+
+.blogs .slide .content .link {
+    padding-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.blogs .slide .content .link a {
+    color: rgb(255, 255, 255);
+
+}
+
+.blogs .slide .content .link a:hover {
+    color: #fff;
+}
+
+.blogs .slide .content .link span {
+    color: #fff;
+    padding: 0 1rem;
+}
+
+.blogs .slide .content h3 {
+    font-size: 2rem;
+    color: #fff;
+    line-height: 1.5;
+}
+
 .blogs .slide .content p {
-     font-size: 1.5rem; 
-     color: #aaa; 
-     line-height: 2; 
-     padding: 1rem 0; 
+    font-size: 1.5rem;
+    color: #aaa;
+    line-height: 2;
+    padding: 1rem 0;
 }
 
 /* ===== FOOTER ===== */
@@ -743,7 +749,7 @@ section {
 }
 
 .products .box img {
-    width: 65%;
+    width: 70%;
     height: 160px;
     object-fit: cover;
     border-radius: .5rem;
@@ -783,13 +789,14 @@ section {
         width: 50rem;
     }
 
-    .home .slide .content h3 { /*novo*/
-    font-size: 5rem;
-    letter-spacing: -1px;
-}
+    .home .slide .content h3 {
+        /*novo*/
+        font-size: 5rem;
+        letter-spacing: -1px;
+    }
 }
 
-   @media (max-width: 768px) {
+@media (max-width: 768px) {
     #menu-btn {
         display: block;
         font-size: 3rem;
@@ -809,7 +816,7 @@ section {
 
     /* Esconde a navbar no mobile por padrão */
     .header .navbar {
-    display: none;
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 69px;
@@ -819,7 +826,7 @@ section {
         z-index: 9999;
         text-align: center;
     }
-    
+
 
     /* Mostra a navbar ao clicar */
     .header .navbar.active {
@@ -853,28 +860,32 @@ section {
         flex-direction: column;
         padding: 0 2rem;
     }
+
     /*novo*/
     .home .slide {
-    min-height: 85vh;
-    align-items: flex-end;
-    padding-bottom: 8rem;
+        min-height: 85vh;
+        align-items: flex-end;
+        padding-bottom: 8rem;
     }
 
     .home .slide .content h3 {
-    font-size: 3.8rem;
-    letter-spacing: -0.5px;
+        font-size: 3.8rem;
+        letter-spacing: -0.5px;
     }
 
     .home .slide .content span {
-    font-size: 0.95rem;
-    letter-spacing: 2px;
+        font-size: 0.95rem;
+        letter-spacing: 2px;
     }
 
-    .home .slide .content:before { /*novo*/
-    display: none;
-    background: linear-gradient(to right, rgba(0,0,0,0.85) 40%, rgba(80,0,120,0.2) 100%);
+    .home .slide .content:before {
+        /*novo*/
+        display: none;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 40%, rgba(80, 0, 120, 0.2) 100%);
 
-    } /*fim novo*/
+    }
+
+    /*fim novo*/
 }
 
 @media (max-width: 450px) {
@@ -895,6 +906,7 @@ section {
         display: none !important;
     }
 }
+
 /* modalidades */
 .modalidades {
     display: flex;
@@ -918,6 +930,7 @@ section {
     background: #9b5de5;
     color: #fff;
 }
+
 /* botão matricule-se header */
 .btn-matricula {
     background: #3a0344;
@@ -1041,8 +1054,15 @@ section {
 }
 
 @keyframes fadeTab {
-    from { opacity: 0; transform: translateY(10px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .about-tab blockquote {
@@ -1099,14 +1119,14 @@ section {
     margin: 0 .5rem;
     transition: .2s linear;
 }
- 
+
 .links a:hover {
     color: #00bcd4;
 }
 
 .video-box video:hover {
     transform: scale(1.02);
-    box-shadow: 
+    box-shadow:
         0 0 35px rgba(176, 38, 255, 0.5),
         0 0 80px rgba(176, 38, 255, 0.25);
 }
@@ -1144,7 +1164,9 @@ section {
 .benefits-box .btn {
     margin-top: 2rem;
     display: inline-block;
-}/* ===== PILATES (COLETIVAS) ===== */
+}
+
+/* ===== PILATES (COLETIVAS) ===== */
 .pilates {
     padding: 6rem 9%;
     background: #0a0a0a;
@@ -1167,14 +1189,14 @@ section {
 }
 
 .video-box {
-    width: 320px;
-    height: 200px;
+    width: 300px;
+    height: auto;  /* era 200px fixo */
     flex: none;
 }
 
 .video-box video {
-    width: 320px !important;
-    height: 200px !important;
+    width: 300px !important;
+    height: auto !important;  /* era 200px fixo */
     object-fit: cover;
 }
 
@@ -1226,7 +1248,7 @@ section {
     }
 
     .video-box video {
-        max-width: 100%;
+        max-width: 70%;
     }
 
     .benefits-box {
@@ -1242,7 +1264,7 @@ section {
     }
 
     .video-box video {
-        max-width: 100%;
+        max-width: 70%;
     }
 
     .benefits-box {
@@ -1258,6 +1280,7 @@ section {
         margin-right: 0.5rem;
     }
 }
+
 /* ===== aulas ==== */
 
 .aulas {
@@ -1358,7 +1381,7 @@ section {
 }
 
 .aula-video video {
-    width: 100%;
+    width: 70%;
     max-height: 260px;
     border-radius: 0.8rem;
     object-fit: cover;
@@ -1374,6 +1397,7 @@ section {
         min-width: 130px;
     }
 }
+
 /* hover nas aulas */
 .linha span:not(:first-child):hover {
     background: rgba(176, 38, 255, 0.2);
@@ -1423,11 +1447,9 @@ section {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.3) 0%,
-        rgba(0,0,0,0.85) 100%
-    );
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.85) 100%);
 }
 
 .products-hero-content {
@@ -1458,7 +1480,7 @@ section {
 
 .products-hero p {
     font-size: 1.8rem;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     margin-top: 1rem;
     max-width: 600px;
 }
@@ -1481,157 +1503,244 @@ section {
 }
 
 .aula-hero {
-            min-height: 40vh;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            display: flex;
-            align-items: flex-end;
-            padding: 4rem 9%;
-            margin-top: 69px;
-        }
-        .aula-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.85) 100%);
-        }
-        .aula-hero-content { position: relative; z-index: 2; }
-        .aula-hero-tag {
-            display: inline-block;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #b026ff;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            border-left: 3px solid #b026ff;
-            padding-left: 1.2rem;
-            margin-bottom: 1.2rem;
-        }
-        .aula-hero h1 {
-            font-size: 6rem;
-            font-weight: 800;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: -2px;
-            line-height: 1;
-        }
-        .aula-hero p {
-            font-size: 1.8rem;
-            color: rgba(255,255,255,0.7);
-            margin-top: 1rem;
-            max-width: 600px;
-        }
-        .aula-body {
-            padding: 6rem 9%;
-            background: #000;
-            display: flex;
-            gap: 6rem;
-            flex-wrap: wrap;
-            align-items: flex-start;
-        }
-        .aula-video-section { flex: 1 1 45rem; }
-        .aula-video-section h2, .aula-info-section h2 {
-            font-size: 2.4rem;
-            color: #fff;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid #b026ff;
-            display: inline-block;
-        }
-        .aula-video-section video {
-            width: 100%;
-            border-radius: 1rem;
-            border: 1px solid rgba(155, 93, 229, 0.4);
-            box-shadow: 0 0 20px rgba(155, 93, 229, 0.2);
-        }
-        .aula-info-section { flex: 1 1 35rem; max-width: 480px; }
-        .aula-beneficios { list-style: none; padding: 0; margin-bottom: 3rem; }
-        .aula-beneficios li {
-            font-size: 1.5rem;
-            color: #ccc;
-            margin-bottom: 1.2rem;
-            padding-left: 2.5rem;
-            position: relative;
-            line-height: 1.5;
-        }
-        .aula-beneficios li::before {
-            content: "✔";
-            position: absolute;
-            left: 0;
-            color: #9b5de5;
-            font-weight: bold;
-        }
-        .aula-tags { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem; }
-        .aula-tag {
-            background: transparent;
-            border: 1px solid #9b5de5;
-            color: #c77dff;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 1.3rem;
-        }
-        .aula-btn {
-            display: inline-block;
-            padding: 1.4rem 3.5rem;
-            background: linear-gradient(45deg, #56175E, #9b5de5);
-            color: #fff;
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border-radius: 6px;
-            box-shadow: 0 0 20px rgba(176, 38, 255, 0.3);
-            transition: 0.3s;
-        }
-        .aula-btn:hover {
-            box-shadow: 0 0 35px rgba(176, 38, 255, 0.6);
-            transform: translateY(-2px);
-        }
-        .outras-aulas { padding: 6rem 9%; background: #0a0a0a; }
-        .outras-aulas h2 {
-            font-size: 2.8rem;
-            color: #fff;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-        .outras-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-            gap: 1.5rem;
-        }
-        .outra-card {
-            background: #111;
-            border: 1px solid rgba(155, 93, 229, 0.2);
-            border-radius: 1rem;
-            overflow: hidden;
-            transition: 0.3s;
-            text-decoration: none;
-        }
-        .outra-card:hover {
-            border-color: rgba(176, 38, 255, 0.5);
-            transform: translateY(-4px);
-            box-shadow: 0 0 25px rgba(176, 38, 255, 0.15);
-        }
-        .outra-card img { width: 100%; height: 140px; object-fit: cover; }
-        .outra-card-info { padding: 1.5rem; }
-        .outra-card-info h3 {
-            font-size: 1.8rem;
-            color: #fff;
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-        .outra-card-info p { font-size: 1.3rem; color: #aaa; }
-        @media (max-width: 768px) {
-            .aula-hero h1 { font-size: 4rem; }
-            .aula-body { flex-direction: column; gap: 4rem; padding: 4rem 5%; }
-            .aula-info-section { max-width: 100%; }
-            .outras-aulas { padding: 4rem 5%; }
-        }
+    min-height: 40vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 4rem 9%;
+    margin-top: 69px;
+}
+
+.aula-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.85) 100%);
+}
+
+.aula-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.aula-hero-tag {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #b026ff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border-left: 3px solid #b026ff;
+    padding-left: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.aula-hero h1 {
+    font-size: 6rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.aula-hero p {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 1rem;
+    max-width: 600px;
+}
+
+.aula-body {
+    padding: 6rem 9%;
+    background: #000;
+    display: flex;
+    gap: 6rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.aula-video-section {
+    flex: 1 1 45rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.aula-video-section h2,
+.aula-info-section h2 {
+    font-size: 2.0rem;
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #b026ff;
+    display: inline-block;
+}
+
+.aula-video-section video {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 1rem;
+    border: 1px solid rgba(155, 93, 229, 0.4);
+    box-shadow: 0 0 20px rgba(155, 93, 229, 0.2);
+}
+
+.aula-info-section {
+    flex: 1 1 35rem;
+    max-width: 380px;
+}
+
+.aula-beneficios {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 3rem;
+}
+
+.aula-beneficios li {
+    font-size: 1.8rem;
+    color: #ccc;
+    margin-bottom: 1.2rem;
+    padding-left: 2.5rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.aula-beneficios li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #9b5de5;
+    font-weight: bold;
+}
+
+.aula-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.aula-tag {
+    background: transparent;
+    border: 1px solid #9b5de5;
+    color: #c77dff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+}
+
+.aula-btn {
+    display: inline-block;
+    padding: 1.2rem 2.8rem;
+    background:#56175E;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+.aula-btn:hover {
+    background: #6d1f78;
+    transform: translateY(-2px);
+}
+
+.outras-aulas {
+    padding: 6rem 9%;
+    background: #0a0a0a;
+}
+
+.outras-aulas h2 {
+    font-size: 2.8rem;
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.outras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+}
+
+@media (max-width: 480px) {
+    .outras-grid {
+        grid-template-columns: 1fr 1fr; /* 2 colunas em mobile */
+    }
+}
+
+.outra-card {
+    background: #111;
+    border: 1px solid rgba(155, 93, 229, 0.2);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.outra-card:hover {
+    border-color: rgba(176, 38, 255, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(176, 38, 255, 0.15);
+}
+
+.outra-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.outra-card-info {
+    padding: 1.5rem;
+}
+
+.outra-card-info h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.outra-card-info p {
+    font-size: 1.3rem;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .aula-hero h1 {
+        font-size: 4.5rem;
+    }
+
+    .aula-body {
+        flex-direction: column;
+        gap: 4rem;
+        padding: 4rem 5%;
+    }
+
+    .aula-info-section {
+        max-width: 100%;
+    }
+
+    .outras-aulas {
+        padding: 4rem 5%;
+    }
+}
+
+.aula-descricao {
+    font-size: 1.8rem;
+    color: #ccc;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+}
+

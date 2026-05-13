@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Horários - OVERworld</title>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="icon" type="image/png" href="img/PRINCIPAL 2.png">
+
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        .horarios-hero {
+            min-height: 35vh;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.65),
+                    rgba(0, 0, 0, 0.85)),
+                url('img/forro24.jpg');
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: flex-end;
+
+            padding: 5rem 9%;
+            margin-top: 69px;
+        }
+
+        .horarios-hero-content {
+            max-width: 700px;
+        }
+
+        .horarios-tag {
+            display: inline-block;
+
+            color: #b026ff;
+
+            font-size: 1.1rem;
+            font-weight: 700;
+
+            letter-spacing: 4px;
+            text-transform: uppercase;
+
+            border-left: 3px solid #b026ff;
+
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .horarios-hero h1 {
+            font-size: 4rem;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .horarios-hero p {
+            color: #bbb;
+            font-size: 1.7rem;
+            line-height: 1.7;
+        }
+
+        .horarios-section {
+            background: #000;
+            padding: 7rem 9%;
+        }
+
+        .horarios-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .horarios-title {
+            font-size: 2.8rem;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+        }
+
+        .tabela-horarios {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 5rem;
+        }
+
+        .tabela-horarios th {
+            text-align: left;
+            padding: 1.8rem;
+
+            color: #b026ff;
+
+            font-size: 1.5rem;
+            text-transform: uppercase;
+
+            border-bottom: 2px solid rgba(176, 38, 255, 0.3);
+        }
+
+        .tabela-horarios td {
+            padding: 1.8rem;
+
+            color: #ddd;
+
+            font-size: 1.5rem;
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .tabela-horarios tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .horario-roxo {
+            color: #c77dff;
+            font-weight: 700;
+        }
+
+        .observacao {
+            color: #888;
+            font-size: 1.4rem;
+            line-height: 1.7;
+            margin-top: -2rem;
+        }
+
+        @media (max-width: 768px) {
+
+            .horarios-hero {
+                padding: 4rem 5%;
+            }
+
+            .horarios-section {
+                padding: 5rem 5%;
+            }
+
+            .horarios-hero h1 {
+                font-size: 4rem;
+            }
+
+            .tabela-horarios th,
+            .tabela-horarios td {
+                padding: 1.2rem;
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <a href="overworld.html" class="logo">
+            <img src="img/PRINCIPAL 2.png" alt="logo">
+        </a>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="overworld.html#home">Início</a>
+            <a href="overworld.html#about">Sobre</a>
+            <a href="overworld.html#features">Nossos Serviços</a>
+            <a href="overworld.html#trainers">Treinadores</a>
+            <a href="overworld.html#blogs">Eventos</a>
+            <a href="produtos.html">Produtos</a>
+    
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="horarios-hero">
+
+            <div class="horarios-hero-content">
+
+                <div class="horarios-tag">
+                    OVERworld — Horários
+                </div>
+
+                <h1>Horários</h1>
+
+            </div>
+
+        </section>
+
+        <section class="horarios-section">
+
+            <div class="horarios-container">
+
+                <h2 class="horarios-title">
+                    Coletivas
+                </h2>
+
+                <table class="tabela-horarios">
+
+                    <thead>
+                        <tr>
+                            <th>Modalidade</th>
+                            <th>Dias</th>
+                            <th>Horário</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Pilates</td>
+
+                            <td>
+                                Seg | Ter | Qua | Sex <br>
+                            </td>
+
+                            <td class="horario-roxo">
+                                08:00 | 18:00 (seg) <br>
+                        
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Jump</td>
+                            <td>Seg | Ter | Qua | Qui </td>
+                            <td class="horario-roxo">9:00 | 19:50 (ter e qui)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Funcional/localizada</td>
+                            <td> Ter | Qui </td>
+                            <td class="horario-roxo">09:00 (Ter) | 8:00 (Qua)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Muay Thai</td>
+                            <td> Seg | Qua</td>
+                            <td class="horario-roxo">20:00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Forró</td>
+                            <td>Quarta</td>
+                            <td class="horario-roxo">21:00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Jiu-jitsu</td>
+                            <td> Ter | Qui</td>
+                            <td class="horario-roxo">20:50</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <h2 class="horarios-title">
+                    Horário de Funcionamento
+                </h2>
+
+                <table class="tabela-horarios">
+
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Horário</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Segunda à Sexta</td>
+                            <td class="horario-roxo">06:00 às 23:00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sábado</td>
+                            <td class="horario-roxo">08:00 às 18:00</td>
+                        </tr>
+
+                        <tr>
+                            <td>Domingo</td>
+                            <td class="horario-roxo">09:00 às 13:00</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <p class="observacao">
+                    * Horários sujeitos a alterações em feriados e eventos especiais.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+
+                <h3>Conheça</h3>
+
+                <a href="overworld.html#about">Sobre nós</a>
+                <a href="overworld.html#blogs">Eventos</a>
+                <a href="coletivas.html">Coletivas</a>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Veja também</h3>
+
+                <a href="https://bit.ly/feedbackoverworld" target="_blank">
+                    O que dizem sobre nós
+                </a>
+
+                <!-- <a href="patrocinios.html">Patrocínios</a>
+                <a href="acoes_sociais.html">Ações sociais</a> -->
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Saiba mais</h3>
+
+                <a href="horarios.html">Horários</a>
+                <a href="produtos.html">Produtos</a>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Entre em contato</h3>
+
+                <div class="social">
+
+                    <a href="https://www.instagram.com/overworld._/" class="fab fa-instagram">
+                        @overworld._
+                    </a>
+
+                    <a href="https://www.contate.me/5561981358742" class="fab fa-whatsapp">
+                        WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <img src="img/PRINCIPAL 2.png" alt="logo">
+
+            <p>
+                © 2026 OVERworld - Todos os direitos reservados
+            </p>
+
+            <div class="credits">
+
+                <span>Desenvolvido por</span>
+
+                <div class="devs">
+
+                    <div class="dev">
+
+                        <p>Ana Guerreiro</p>
+
+                        <div class="links">
+
+                            <a href="https://github.com/anaguerreiro-git" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+
+                            <a href="https://instagram.com/ana.guerreiiro" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://contate.me/556198899128" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="dev">
+
+                        <p>João Guilherme</p>
+
+                        <div class="links">
+
+                            <a href="https://github.com/devjoaoguilhermee" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+
+                            <a href="https://instagram.com/guih.one" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+
+                            <a href="https://contate.me/5561998260449" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script src='./main.js'></script>
+
+</body>
+
+</html>
