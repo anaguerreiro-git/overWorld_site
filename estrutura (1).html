@@ -9,22 +9,23 @@
     <link rel="icon" type="image/png" href="img/PRINCIPAL 2.png">
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
 </head>
 
 <body>
     <header class="header">
-        <a href="overworld.html" class="logo">
+        <a href="index.html" class="logo">
             <img src="img/PRINCIPAL 2.png" alt="logo">
         </a>
 
         <div id="menu-btn" class="fas fa-bars"></div>
 
         <nav class="navbar">
-            <a href="overworld.html#home">Início</a>
-            <a href="overworld.html#about">Sobre</a>
-            <a href="overworld.html#features">Nossos Serviços</a>
-            <a href="overworld.html#trainers">Treinadores</a>
-            <a href="overworld.html#blogs">Eventos</a>
+            <a href="index.html#home">Início</a>
+            <a href="index.html#about">Sobre</a>
+            <a href="index.html#features">Nossos Serviços</a>
+            <a href="index.html#trainers">Treinadores</a>
+            <a href="index.html#blogs">Eventos</a>
            <!-- <a href="patrocinios.html">Patrocínios</a>
             <a href="acoes_sociais.html">Ações Sociais</a>-->
             <a href="produtos.html">Produtos</a>
@@ -141,9 +142,9 @@
 
             <div class="footer-box">
                 <h3>Veja também</h3>
-                <a href="overworld.html#feedback">O que dizem sobre nós</a>
-                <a href="patrocinios.html">Patrocínios</a>
-                <a href="acoes_sociais.html">Ações sociais</a>
+                <a href="https://bit.ly/feedbackoverworld" target="_blank">O que dizem sobre nós</a>
+                <!-- <a href="patrocinios.html">Patrocínios</a>
+                <a href="acoes_sociais.html">Ações sociais</a> -->
             </div>
 
             <div class="footer-box">
@@ -181,194 +182,13 @@
                         <div class="links">
                             <a href="https://github.com/devjoaoguilhermee" target="_blank"><i class="fab fa-github"></i></a>
                             <a href="https://instagram.com/guih.one" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://contate.me/5561998260449" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
-    <style>
-        .est-hero {
-            position: relative;
-            height: 520px;
-            display: flex;
-            align-items: flex-end;
-            padding: 4rem 7vw;
-            margin-top: 72px;
-        }
-
-        .est-hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to right, rgba(12, 12, 12, 0.50) 40%, rgba(194, 33, 235, 0.1));
-        }
-
-        .est-hero-content { position: relative; z-index: 1; }
-
-        .est-eyebrow {
-            display: block;
-            font-size: 1.4rem;
-            letter-spacing: .25em;
-            color: #c77dff;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            border-left: 3px solid var(--main-color);
-            padding-left: .75rem;
-        }
-
-        .est-hero-content h1 {
-            font-size: clamp(2.6rem, 6vw, 5rem);
-            color: #fff;
-            line-height: 1;
-            margin-bottom: 1rem;
-        }
-
-        .est-hero-content p {
-            color: rgba(255,255,255,.7);
-            font-size: 1.15rem;
-            max-width: 500px;
-        }
-
-        /* CARROSSEL PRINCIPAL */
-        .est-areas { padding: 4rem 7vw 5rem; }
-
-        .carr-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-top: 2.5rem;
-        }
-
-        .carr-track { flex: 1; overflow: hidden; }
-
-        .carr-slide {
-            display: none;
-            gap: 2.5rem;
-            align-items: center;
-        }
-
-        .carr-slide.ativo { display: flex; }
-
-        .carr-texto h3 {
-            font-size: 2.4rem;
-            color: #4c0a81;
-            margin-bottom: 1rem;
-        }
-
-        .carr-texto p {
-            color: #ccc;
-            font-size: 1.9rem;
-            line-height: 1.8;
-        }
-
-        .carr-btn {
-            background: var(--main-color);
-            border: none;
-            color: #8f1abd;
-            width: 48px;
-            height: 48px;
-            font-size: 2rem;
-            cursor: pointer;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity .2s;
-        }
-
-        .carr-btn:hover { opacity: .75; }
-
-        .carr-dots {
-            display: flex;
-            justify-content: center;
-            gap: .7rem;
-            margin-top: 2rem;
-        }
-
-        .carr-dots span {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #444;
-            cursor: pointer;
-            transition: background .2s;
-        }
-
-        .carr-dots span.ativo { background: var(--main-color); }
-
-        /* MINI CARROSSEL DE FOTOS */
-        .mini-carr {
-            position: relative;
-            width: 50%;
-            max-width: 520px;
-            flex-shrink: 0;
-        }
-
-        .mini-track { width: 100%; }
-
-        .mini-foto {
-            display: none;
-            width: 100%;
-            height: 360px;
-            object-fit: cover;
-        }
-
-        .mini-foto.ativa { display: block; }
-
-        .mini-prev,
-        .mini-next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,.6);
-            border: none;
-            color: #fff;
-            width: 36px;
-            height: 36px;
-            font-size: .9rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
-            transition: background .2s;
-        }
-
-        .mini-prev:hover,
-        .mini-next:hover { 
-            background: var(--main-color); 
-        }
-
-        .mini-prev { 
-            left: 8px; 
-        }
-
-        .mini-next { 
-            right: 8px; 
-        }
-
-        @media (max-width: 700px) {
-            .carr-slide.ativo { 
-                flex-direction: column; 
-            }
-
-            .mini-carr { 
-                width: 100%; 
-                max-width: 100%; 
-            }
-
-            .mini-foto { 
-                height: 240px; 
-            }
-
-            .est-hero { 
-                height: 420px; 
-            }
-
-        }
-        
-    </style>
 
     <script src='./main.js'></script>
     <script>

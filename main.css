@@ -1744,3 +1744,407 @@ section {
     margin-bottom: 2rem;
 }
 
+est-hero {
+            position: relative;
+            height: 520px;
+            display: flex;
+            align-items: flex-end;
+            padding: 4rem 7vw;
+            margin-top: 72px;
+        }
+
+        .est-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(12, 12, 12, 0.50) 40%, rgba(194, 33, 235, 0.1));
+        }
+
+        .est-hero-content { position: relative; z-index: 1; }
+
+        .est-eyebrow {
+            display: block;
+            font-size: 1.4rem;
+            letter-spacing: .25em;
+            color: #c77dff;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--main-color);
+            padding-left: .75rem;
+        }
+
+        .est-hero-content h1 {
+            font-size: clamp(2.6rem, 6vw, 5rem);
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .est-hero-content p {
+            color: rgba(255,255,255,.7);
+            font-size: 1.15rem;
+            max-width: 500px;
+        }
+
+        /* CARROSSEL PRINCIPAL */
+        .est-areas { padding: 4rem 7vw 5rem; }
+
+        .carr-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2.5rem;
+        }
+
+        .carr-track { flex: 1; overflow: hidden; }
+
+        .carr-slide {
+            display: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .carr-slide.ativo { display: flex; }
+
+        .carr-texto h3 {
+            font-size: 2.4rem;
+            color: #4c0a81;
+            margin-bottom: 1rem;
+        }
+
+        .carr-texto p {
+            color: #ccc;
+            font-size: 1.9rem;
+            line-height: 1.8;
+        }
+
+        .carr-btn {
+            background: var(--main-color);
+            border: none;
+            color: #8f1abd;
+            width: 48px;
+            height: 48px;
+            font-size: 2rem;
+            cursor: pointer;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity .2s;
+        }
+
+        .carr-btn:hover { opacity: .75; }
+
+        .carr-dots {
+            display: flex;
+            justify-content: center;
+            gap: .7rem;
+            margin-top: 2rem;
+        }
+
+        .carr-dots span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #444;
+            cursor: pointer;
+            transition: background .2s;
+        }
+
+        .carr-dots span.ativo { background: var(--main-color); }
+
+        /* MINI CARROSSEL DE FOTOS */
+        .mini-carr {
+            position: relative;
+            width: 50%;
+            max-width: 520px;
+            flex-shrink: 0;
+        }
+
+        .mini-track { width: 100%; }
+
+        .mini-foto {
+            display: none;
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+        }
+
+        .mini-foto.ativa { display: block; }
+
+        .mini-prev,
+        .mini-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,.6);
+            border: none;
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            font-size: .9rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            transition: background .2s;
+        }
+
+        .mini-prev:hover,
+        .mini-next:hover { 
+            background: var(--main-color); 
+        }
+
+        .mini-prev { 
+            left: 8px; 
+        }
+
+        .mini-next { 
+            right: 8px; 
+        }
+
+        @media (max-width: 700px) {
+            .carr-slide.ativo { 
+                flex-direction: column; 
+            }
+
+            .mini-carr { 
+                width: 100%; 
+                max-width: 100%; 
+            }
+
+            .mini-foto { 
+                height: 240px; 
+            }
+
+            .est-hero { 
+                height: 420px; 
+            }
+
+        }
+
+        .aula-hero {
+            min-height: 40vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 4rem 9%;
+            margin-top: 69px;
+        }
+
+        .aula-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.85) 100%);
+        }
+
+        .aula-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .aula-hero-tag {
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #b026ff;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            border-left: 3px solid #b026ff;
+            padding-left: 1.2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .aula-hero h1 {
+            font-size: 6rem;
+            font-weight: 800;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
+        .aula-hero p {
+            font-size: 1.8rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 1rem;
+            max-width: 600px;
+        }
+
+        .aula-body {
+            padding: 6rem 9%;
+            background: #000;
+            display: flex;
+            gap: 6rem;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .aula-video-section {
+            flex: 1 1 45rem;
+        }
+
+        .aula-video-section h2,
+        .aula-info-section h2 {
+            font-size: 2.4rem;
+            color: #fff;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #b026ff;
+            display: inline-block;
+        }
+
+        .aula-video-section video {
+            width: 100%;
+            border-radius: 1rem;
+            border: 1px solid rgba(155, 93, 229, 0.4);
+            box-shadow: 0 0 20px rgba(155, 93, 229, 0.2);
+        }
+
+        .aula-info-section {
+            flex: 1 1 35rem;
+            max-width: 480px;
+        }
+
+        .aula-beneficios {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 3rem;
+        }
+
+        .aula-beneficios li {
+            font-size: 1.5rem;
+            color: #ccc;
+            margin-bottom: 1.2rem;
+            padding-left: 2.5rem;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .aula-beneficios li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #9b5de5;
+            font-weight: bold;
+        }
+
+        .aula-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .aula-tag {
+            background: transparent;
+            border: 1px solid #9b5de5;
+            color: #c77dff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 1.3rem;
+        }
+
+        .aula-btn {
+            display: inline-block;
+            padding: 1.4rem 3.5rem;
+            background:#56175E;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 6px;
+            box-shadow: 0 0 20px rgba(176, 38, 255, 0.3);
+            transition: 0.3s;
+        }
+
+        .aula-btn:hover {
+            box-shadow: 0 0 35px rgba(176, 38, 255, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .outras-aulas {
+            padding: 6rem 9%;
+            background: #0a0a0a;
+        }
+
+        .outras-aulas h2 {
+            font-size: 2.8rem;
+            color: #fff;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .outras-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            gap: 1.5rem;
+        }
+
+        .outra-card {
+            background: #111;
+            border: 1px solid rgba(155, 93, 229, 0.2);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .outra-card:hover {
+            border-color: rgba(176, 38, 255, 0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 0 25px rgba(176, 38, 255, 0.15);
+        }
+
+        .outra-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+        }
+
+        .outra-card-info {
+            padding: 1.5rem;
+        }
+
+        .outra-card-info h3 {
+            font-size: 1.8rem;
+            color: #fff;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .outra-card-info p {
+            font-size: 1.3rem;
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            .aula-hero h1 {
+                font-size: 4rem;
+            }
+
+            .aula-body {
+                flex-direction: column;
+                gap: 4rem;
+                padding: 4rem 5%;
+            }
+
+            .aula-info-section {
+                max-width: 100%;
+            }
+
+            .outras-aulas {
+                padding: 4rem 5%;
+            }
+        }
