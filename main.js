@@ -197,12 +197,15 @@ function mostrarTab(index) {
     label.textContent = labels[index];
 }
 
-document.querySelector('.about-next').addEventListener('click', () => {
+const btnNext = document.querySelector('.about-next');
+const btnPrev = document.querySelector('.about-prev');
+
+if (btnNext) btnNext.addEventListener('click', () => {
     currentTab = (currentTab + 1) % tabs.length;
     mostrarTab(currentTab);
 });
 
-document.querySelector('.about-prev').addEventListener('click', () => {
+if (btnPrev) btnPrev.addEventListener('click', () => {
     currentTab = (currentTab - 1 + tabs.length) % tabs.length;
     mostrarTab(currentTab);
 });

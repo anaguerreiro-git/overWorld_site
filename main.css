@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
 
+:root {
+    --main-color: #961BA8;
+}
+
 * {
     font-family: 'Nunito', sans-serif;
     margin: 0;
@@ -1744,7 +1748,7 @@ section {
     margin-bottom: 2rem;
 }
 
-est-hero {
+.est-hero {
             position: relative;
             height: 520px;
             display: flex;
@@ -1818,7 +1822,7 @@ est-hero {
         }
 
         .carr-btn {
-            background: var(--main-color);
+            background: transparent;
             border: none;
             color: #8f1abd;
             width: 48px;
