@@ -13,7 +13,7 @@
     outline: none;
     border: none;
     text-transform: none;
-    transition: 0.2s;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
 }
 
 html {
@@ -102,8 +102,8 @@ section {
     height: 69px;
     justify-content: space-between;
     padding: 0 9%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(6px);
     z-index: 10000;
 }
 
@@ -485,7 +485,6 @@ section {
         url(img/leg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     text-align: center;
 }
 

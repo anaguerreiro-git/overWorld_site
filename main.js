@@ -7,10 +7,16 @@ menu.onclick = () =>{
     navbar.classList.toggle('active');
     
 };
-window.onscroll = () =>{
-    menu.classList.remove('fa-times');
-    navbar.classList.remove('active');
-   
+let ticking = false;
+window.onscroll = () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+            ticking = false;
+        });
+        ticking = true;
+    }
 };
 /* Slides */
 
